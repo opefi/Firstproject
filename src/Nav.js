@@ -9,11 +9,14 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function Nav() {
 	return (
 		<nav>
-			<Menu style={{ textAlign: "center" }} mode="horizontal" theme="white">
+			<Menu
+				style={{ textAlign: "center", background: "#ffe4c4" }}
+				mode="horizontal"
+				theme="white">
 				<Menu.Item key="mail">
 					<Link to="/">Acceuil</Link>
 				</Menu.Item>
-
+				{/* <ContactForm /> */}
 				<Menu.Item key="test">
 					<Link to="/contact">Contact</Link>
 				</Menu.Item>

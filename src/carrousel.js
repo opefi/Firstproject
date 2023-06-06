@@ -3,15 +3,11 @@
 import Carousel from "react-bootstrap/Carousel";
 import paysage from "./paysage.jpg";
 
-function NoTransitionExample() {
+function UncontrolledExample() {
 	return (
-		<Carousel slide={true}>
+		<Carousel>
 			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="holder.js/800x400?text=First slide&bg=373940"
-					alt="First slide"
-				/>
+				<img className="d-block w-100" src={paysage} alt="First slide" />
 				<Carousel.Caption>
 					<h3>First slide label</h3>
 					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -20,7 +16,7 @@ function NoTransitionExample() {
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="holder.js/800x400?text=Second slide&bg=282c34"
+					src={require("./photosgite/vetta1/Vetta1A.jpg")}
 					alt="Second slide"
 				/>
 
@@ -32,7 +28,7 @@ function NoTransitionExample() {
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="holder.js/800x400?text=Third slide&bg=20232a"
+					src={require("./photosgite/vetta1/Vetta2A.jpg")}
 					alt="Third slide"
 				/>
 
@@ -47,4 +43,4 @@ function NoTransitionExample() {
 	);
 }
 
-export default NoTransitionExample;
+export default UncontrolledExample;

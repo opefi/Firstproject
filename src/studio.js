@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import paysage from "./paysage.jpg";
 import NoTransitionExample from "./carrousel.js";
 import { Carousel } from "react-carousel-minimal";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+import "react-image-gallery/styles/scss/image-gallery.scss";
 // import { Vetta1A, Vetta2A, Vetta3A } from "./photosgite/vetta1";
 
 // function UncontrolledExample() {
@@ -93,8 +96,52 @@ function studio() {
 		fontSize: "20px",
 		fontWeight: "bold",
 	};
+	const images = [
+		{
+			original:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979006/gites/studio/studio_7_zkwb3o.webp",
+			thumbnail:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979006/gites/studio/studio_7_zkwb3o.webp",
+		},
+		{
+			original:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_1_sqv41z.webp",
+			thumbnail:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_1_sqv41z.webp",
+		},
+		{
+			original:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_5_eo7chb.webp",
+			thumbnail:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_5_eo7chb.webp",
+		},
+		{
+			original:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_4_ifxian.webp",
+			thumbnail:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_4_ifxian.webp",
+		},
+		{
+			original:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_6_t5dozr.webp",
+			thumbnail:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_6_t5dozr.webp",
+		},
+		{
+			original:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_2_jcnjrw.webp",
+			thumbnail:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_2_jcnjrw.webp",
+		},
+		{
+			original:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_3_eter7d.webp",
+			thumbnail:
+				"https://res.cloudinary.com/dvqehinft/image/upload/v1678979005/gites/studio/studio_3_eter7d.webp",
+		},
+	];
 	return (
-		<div className="ome">
+		<div className="ome" style={{ background: "#3a8eba" }}>
 			<Nav />
 
 			<div style={{ textAlign: "center" }}>
@@ -103,24 +150,12 @@ function studio() {
 					style={{
 						padding: "0 20px",
 					}}>
-					<Carousel
-						data={data}
-						time={6000}
-						width="850px"
-						height="500px"
-						captionStyle={captionStyle}
-						radius="10px"
-						slideNumber={true}
-						slideNumberStyle={slideNumberStyle}
-						captionPosition="bottom"
-						automatic={true}
-						dots={true}
-						pauseIconColor="white"
-						pauseIconSize="40px"
-						slideBackgroundColor="darkgrey"
-						slideImageFit="cover"
-						thumbnails={true}
-						thumbnailWidth="100px"
+					<ImageGallery
+						items={images}
+						showIndex={true}
+						autoPlay={true}
+						slideInterval={6000}
+						slideDuration={600}
 						style={{
 							textAlign: "center",
 							maxWidth: "850px",
@@ -128,6 +163,20 @@ function studio() {
 							margin: "40px auto",
 						}}
 					/>
+					<div className="city-description-container">
+						<h1>Studio au cœur de Porto-Vecchio</h1>
+						<p>
+							Ce studio extrêmement confortable, doté d'une terrasse donnant sur
+							un jardin, est situé au sein d'une propriété privée à proximité du
+							centre-ville de Porto-Vecchio. Vous bénéficierez d'une place de
+							stationnement pour votre véhicule au sein de la propriété, ce qui
+							facilitera vos déplacements.
+						</p>
+						<p>
+							Le centre-ville se trouve à seulement 500 mètres, tandis que le
+							port de plaisance est à une courte distance de 800 mètres.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
