@@ -302,6 +302,7 @@ function vetta1() {
 						}}
 					/>
 					<div className="city-description-container">
+						<h1>Les gîtes de la Vetta</h1>
 						<p>
 							Ce gîte, idéal pour un couple, est situé à seulement 5 minutes du
 							centre ville de Porto-Vecchio et à 1 km de la plage, dans la
